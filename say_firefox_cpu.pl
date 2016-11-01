@@ -1,5 +1,5 @@
 #!/usr/bin/perl -w
-# say_firefox.pl --- say the Firefox CPU percentage
+# say_firefox_cpu.pl --- say the Firefox CPU percentage
 # Author: Michael R. Wolf <MichaelRWolf@att.net>
 # Created: 31 Oct 2016
 # Version: 0.01
@@ -44,10 +44,11 @@ sub say_ff_cpu {
     }
 }
 
-while ( 1 ) {
+sub main {
     say_ff_cpu();
-    sleep $sleep_seconds;
 }
+
+main;
 
 __END__
 
