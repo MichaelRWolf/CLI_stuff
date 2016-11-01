@@ -5,11 +5,19 @@
 ## Keywords: 
 ## X-URL: 
 
-all: say_firefox
+EXECS = say_firefox
+
+
+all: $(EXECS)
 
 say_firefox: say_firefox.pl
 	cat say_firefox.pl > say_firefox
 	chmod +x say_firefox
 
+install: $(EXECS)
+	install -p $(EXECS) ~/bin
+
 clean:
-	rm -f say_firefox
+	rm -f $(EXECS)
+
+
