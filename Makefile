@@ -5,14 +5,14 @@
 ## Keywords: 
 ## X-URL: 
 
-EXECS = say_firefox
+EXECS = say_firefox_cpu
 
 
 all: $(EXECS)
 
-say_firefox: say_firefox.pl
-	cat say_firefox.pl > say_firefox
-	chmod +x say_firefox
+say_firefox_cpu: say_firefox_cpu.pl
+	cat say_firefox_cpu.pl > say_firefox_cpu
+	chmod +x say_firefox_cpu
 
 install: $(EXECS)
 	install -p $(EXECS) ~/bin
