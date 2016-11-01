@@ -38,7 +38,7 @@ sub say_ff_cpu {
     open my $say_fh, q{|-}, "say --rate=$say_rate"
         or die "Cannot open say(1) pipeline: $!";
 
-    print "firefox CPU $ff_cpu_rounded\n";
+    printf "firefox CPU %2d\n", $ff_cpu_rounded;
     if ( $ff_cpu_rounded > $ff_high_threshhold) {
         print ${say_fh} "firefox $ff_cpu_rounded"
     }
